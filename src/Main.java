@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
 import classes.Jogador;
 
 public class Main {
@@ -7,6 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
         String input = scanner.nextLine();
+        int qtde, ref;
 
         while (!input.equals("FIM")) {
             String[] infoJogador = input.split(",", -1);
@@ -22,39 +24,14 @@ public class Main {
             jogadores.add(jogador);
             input = scanner.nextLine();
         }
+        qtde = scanner.nextInt();
 
-
-        Jogador
-
-
-        String qnt = scanner.nextLine();
-        int qntInt = Integer.parseInt(qnt);  
-
-
-        for(int j=0; j<qntInt; j++){
-
-            String num = scanner.nextLine();
-
-            for(int k=0; k<jogadores.length; k++){
-
-                if(jogadores[k].id == num){
-                    //print info
-                }
-
-                else{
-                    k++;
-                }
-            }
-
-            //String pesquisa = scanner.nextLine();
-
-            //String[] jogadorPesquisa = pesquisa.split(",",-1);
-
+        for (int i = 0; i < qtde; i++) {
+            ref = scanner.nextInt();
+            jogadores.get(ref).imprimir();
         }
 
     }
-
-
     public static boolean ehVazio(String str) {
         return str.isBlank();
     }
