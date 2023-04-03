@@ -24,32 +24,33 @@ public class Main {
         }
 
 
+        Jogador
+
 
         String qnt = scanner.nextLine();
-        int qntInt = Integer.parseInt(qnt);
-    
-        for(int j = 0;j<qntInt;j++)
-        {
-    
+        int qntInt = Integer.parseInt(qnt);  
+
+
+        for(int j=0; j<qntInt; j++){
+
             String num = scanner.nextLine();
-    
-            for (int k = 0; k < jogadores.length; k++) {
-    
-                if (jogadores.get(k).getId() == num) {
-                    // print info
+
+            for(int k=0; k<jogadores.length; k++){
+
+                if(jogadores[k].id == num){
+                    //print info
                 }
-    
-                else {
+
+                else{
                     k++;
                 }
             }
-    
-            // String pesquisa = scanner.nextLine();
-    
-            // String[] jogadorPesquisa = pesquisa.split(",",-1);
-    
-        }
 
+            //String pesquisa = scanner.nextLine();
+
+            //String[] jogadorPesquisa = pesquisa.split(",",-1);
+
+        }
 
     }
 
