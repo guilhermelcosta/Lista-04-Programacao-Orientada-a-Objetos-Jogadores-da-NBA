@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Jogador {
     public Random random = new Random();
     public Scanner scanner = new Scanner(System.in);
-
     private int id;
     private int altura;
     private int peso;
@@ -41,34 +40,31 @@ public class Jogador {
         return new Jogador(this.id, this.altura, this.peso, this.anoNascimento, this.nome, this.universidade,
                 this.cidadeNascimento, this.estadoNascimento);
     }
-    
-    
-    // * IMPRIMIR
    
    public void imprimir() {
         System.out.printf("[%d ## %s ## %d ## %d ## %d ## %s ## %s ## %s]\n", this.getId(), this.getNome(),
         this.getAltura(), this.getPeso(), this.getAnoNascimento(), this.getUniversidade(),
         this.getCidadeNascimento(), this.getEstadoNascimento());
    }
-    
-    
-    // # Leitura de dados
+
     public void ler() {
-        //String input; 
-        scanner.useDelimiter("\\s*,\\s*"); //vírgula como delimitador de entrada
-        id = scanner.nextInt();
+        System.out.println("Digite o nome do jogador: ");
         nome = scanner.nextLine();
+        System.out.print("Digite o ID: ");
+        id = scanner.nextInt();
+        System.out.print("Digite a altura: ");
         altura = scanner.nextInt();
+        System.out.println("Digite o peso: ");
         peso = scanner.nextInt();
-        universidade = scanner.nextLine();
+        System.out.println("Digite o ano de nascimento: ");
         anoNascimento = scanner.nextInt();
+        System.out.println("Digite a universidade: ");
+        universidade = scanner.nextLine();
+        System.out.println("Digite a cidade de nascimento: ");
         cidadeNascimento = scanner.nextLine();
+        System.out.println("Digite o estado de nascimento: ");
         estadoNascimento = scanner.nextLine();
-        //input = scanner.nextLine();
-        // System.out.println("teste");
     }
-    
-        
 
     public int getId() {
         return id;
