@@ -6,8 +6,9 @@ import classes.Jogador;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
         ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
+        String input = scanner.nextLine();
+        int qtde, ref;
 
         while (!input.equals("FIM")) {
             String[] infoJogador = input.split(",", -1);
@@ -23,12 +24,15 @@ public class Main {
             jogadores.add(jogador);
             input = scanner.nextLine();
         }
+        qtde = scanner.nextInt();
 
-        System.out.println(jogadores.get(1150).getNome());
+        for (int i = 0; i < qtde; i++) {
+            ref = scanner.nextInt();
+            jogadores.get(ref).imprimir();
+        }
+
     }
-
     public static boolean ehVazio(String str) {
         return str.isBlank();
     }
-
 }

@@ -4,7 +4,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Jogador {
-    public Random random = new Random();
     public Scanner scanner = new Scanner(System.in);
     private int id;
     private int altura;
@@ -16,13 +15,13 @@ public class Jogador {
     private String estadoNascimento;
 
     public Jogador() {
-        id = random.nextInt(1000);
+        id = 0;
         altura = 0;
         peso = 0;
         anoNascimento = 0;
-        universidade = "Nao informado";
-        cidadeNascimento = "Nao informado";
-        estadoNascimento = "Nao informado";
+        universidade = "nao informado";
+        cidadeNascimento = "nao informado";
+        estadoNascimento = "nao informado";
     }
 
     public Jogador(int id, String nome, int altura, int peso, String universidade, int anoNascimento,
