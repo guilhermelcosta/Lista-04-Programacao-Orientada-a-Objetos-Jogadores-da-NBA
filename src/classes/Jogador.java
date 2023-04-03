@@ -1,4 +1,5 @@
 package classes;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,8 +25,8 @@ public class Jogador {
         estadoNascimento = "Nao informado";
     }
 
-    public Jogador(int id, int altura, int peso, int anoNascimento, String nome, String universidade,
-            String cidadeNascimento, String estadoNascimento) {
+    public Jogador(int id, String nome, int altura, int peso, String universidade, int anoNascimento,
+                   String cidadeNascimento, String estadoNascimento) {
         this.id = id;
         this.altura = altura;
         this.peso = peso;
@@ -37,15 +38,15 @@ public class Jogador {
     }
 
     public Jogador clone() {
-        return new Jogador(this.id, this.altura, this.peso, this.anoNascimento, this.nome, this.universidade,
+        return new Jogador(this.id, this.nome, this.altura, this.peso, this.universidade, this.anoNascimento,
                 this.cidadeNascimento, this.estadoNascimento);
     }
-   
-   public void imprimir() {
+
+    public void imprimir() {
         System.out.printf("[%d ## %s ## %d ## %d ## %d ## %s ## %s ## %s]\n", this.getId(), this.getNome(),
-        this.getAltura(), this.getPeso(), this.getAnoNascimento(), this.getUniversidade(),
-        this.getCidadeNascimento(), this.getEstadoNascimento());
-   }
+                this.getAltura(), this.getPeso(), this.getAnoNascimento(), this.getUniversidade(),
+                this.getCidadeNascimento(), this.getEstadoNascimento());
+    }
 
     public void ler() {
         System.out.println("Digite o nome do jogador: ");
