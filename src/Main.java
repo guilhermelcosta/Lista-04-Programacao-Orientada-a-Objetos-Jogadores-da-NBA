@@ -6,9 +6,14 @@ import classes.Jogador;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+<<<<<<< Updated upstream
         ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
         String input = scanner.nextLine();
         int qtde, ref;
+=======
+        String input = scanner.nextLine();
+        ArrayList<Jogador> jogadores = new ArrayList<Jogador>(); // * Criação de array sem saber o tamanho prévio
+>>>>>>> Stashed changes
 
         while (!input.equals("FIM")) {
             String[] infoJogador = input.split(",", -1);
@@ -22,17 +27,21 @@ public class Main {
             String estadoNascimento = ehVazio(infoJogador[7]) ? "nao informado" : infoJogador[7];
             Jogador jogador = new Jogador(id, nome, altura, peso, universidade, anoNascimento, cidadeNascimento, estadoNascimento);
             jogadores.add(jogador);
-            input = scanner.nextLine();
+            input = scanner.nextLine(); 
         }
+<<<<<<< Updated upstream
         qtde = scanner.nextInt();
 
         for (int i = 0; i < qtde; i++) {
             ref = scanner.nextInt();
             jogadores.get(ref).imprimir();
         }
+=======
+       
+>>>>>>> Stashed changes
 
     }
     public static boolean ehVazio(String str) {
-        return str.isBlank();
+        return str.isBlank();       
     }
 }
