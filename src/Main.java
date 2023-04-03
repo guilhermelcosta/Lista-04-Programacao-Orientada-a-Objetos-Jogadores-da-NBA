@@ -26,5 +26,4 @@ public class Main {
     public static boolean ehVazio(String str) {
         return str.isBlank();
     }
-
 }
