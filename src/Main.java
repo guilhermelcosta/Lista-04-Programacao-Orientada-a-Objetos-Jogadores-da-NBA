@@ -22,7 +22,39 @@ public class Main {
             jogadores.add(jogador);
             input = scanner.nextLine();
         }
+
+
+        Jogador
+
+
+        String qnt = scanner.nextLine();
+        int qntInt = Integer.parseInt(qnt);  
+
+
+        for(int j=0; j<qntInt; j++){
+
+            String num = scanner.nextLine();
+
+            for(int k=0; k<jogadores.length; k++){
+
+                if(jogadores[k].id == num){
+                    //print info
+                }
+
+                else{
+                    k++;
+                }
+            }
+
+            //String pesquisa = scanner.nextLine();
+
+            //String[] jogadorPesquisa = pesquisa.split(",",-1);
+
+        }
+
     }
+
+
     public static boolean ehVazio(String str) {
         return str.isBlank();
     }
