@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import classes.Jogador;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
         ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
+        String input = scanner.nextLine();
 
         while (!input.equals("FIM")) {
             String[] infoJogador = input.split(",", -1);
@@ -23,10 +22,7 @@ public class Main {
             jogadores.add(jogador);
             input = scanner.nextLine();
         }
-
-        System.out.println(jogadores.get(1150).getNome());
     }
-
     public static boolean ehVazio(String str) {
         return str.isBlank();
     }
