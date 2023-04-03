@@ -16,13 +16,13 @@ public class Jogador {
     private String estadoNascimento;
 
     public Jogador() {
-        // id = random.nextInt(1000);
-        // altura = 0;
-        // peso = 0;
-        // anoNascimento = 0;
-        // universidade = "Nao informado";
-        // cidadeNascimento = "Nao informado";
-        // estadoNascimento = "Nao informado";
+        id = random.nextInt(1000);
+        altura = 0;
+        peso = 0;
+        anoNascimento = 0;
+        universidade = "Nao informado";
+        cidadeNascimento = "Nao informado";
+        estadoNascimento = "Nao informado";
     }
 
     public Jogador(int id, int altura, int peso, int anoNascimento, String nome, String universidade,
